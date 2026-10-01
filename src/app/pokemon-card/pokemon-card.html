@@ -1,4 +1,4 @@
-<div class="card" [class.favorite]="isFavorite()">
+<div class="card">
   <p class="dex">{{ dexNumber() }}</p>
   <h3>{{ pokemon().name }}</h3>
 
@@ -10,12 +10,4 @@
   </p>
   <p><strong>Held Item:</strong> {{ pokemon().heldItem }}</p>
   <p class="description">{{ pokemon().description }}</p>
-
-  <button (click)="toggleFavorite()">
-    @if (isFavorite()) {
-      Remove from Favorites
-    } @else {
-      Add to Favorites
-    }
-  </button>
 </div>

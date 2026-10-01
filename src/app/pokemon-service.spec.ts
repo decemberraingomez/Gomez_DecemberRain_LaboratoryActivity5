@@ -15,13 +15,4 @@ describe('PokemonService', () => {
     expect(service.hoenn().length).toBe(6);
     expect(service.totalPokemon()).toBe(18);
   });
-
-  it('should toggle favorites and update the computed count', () => {
-    service.toggleFavorite('Pikachu');
-    expect(service.isFavorite('Pikachu')).toBe(true);
-    expect(service.favoriteCount()).toBe(1);
-
-    service.toggleFavorite('Pikachu');
-    expect(service.favoriteCount()).toBe(0);
-  });
 });

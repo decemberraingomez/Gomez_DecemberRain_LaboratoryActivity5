@@ -1,15 +1,17 @@
-<div class="container">
-  <h1>Pokemon Regions and PokeMart</h1>
-  <p class="subtitle">My favorite Pokemon from Kanto, Johto and Hoenn</p>
+<div class="grid-background">
+  <div class="container">
+    <h1>Pokemon Regions and PokeMart</h1>
+    <p class="subtitle">My favorite Pokemon from Kanto, Johto and Hoenn</p>
 
-  <nav class="navbar">
-    <a [routerLink]="['/home']" routerLinkActive="active-link">Home</a>
-    <a [routerLink]="['/kanto']" routerLinkActive="active-link">Kanto</a>
-    <a [routerLink]="['/johto']" routerLinkActive="active-link">Johto</a>
-    <a [routerLink]="['/hoenn']" routerLinkActive="active-link">Hoenn</a>
-    <a [routerLink]="['/pokemart']" routerLinkActive="active-link">PokeMart</a>
-    <a [routerLink]="['/cart']" routerLinkActive="active-link">Cart ({{ martService.itemCount() }})</a>
-  </nav>
+    <nav class="navbar">
+      <a [routerLink]="['/home']" routerLinkActive="active-link">Home</a>
+      <a [routerLink]="['/kanto']" routerLinkActive="active-link">Kanto</a>
+      <a [routerLink]="['/johto']" routerLinkActive="active-link">Johto</a>
+      <a [routerLink]="['/hoenn']" routerLinkActive="active-link">Hoenn</a>
+      <a [routerLink]="['/pokemart']" routerLinkActive="active-link">PokeMart</a>
+      <a [routerLink]="['/cart']" routerLinkActive="active-link">Cart ({{ martService.itemCount() }})</a>
+    </nav>
 
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+  </div>
 </div>

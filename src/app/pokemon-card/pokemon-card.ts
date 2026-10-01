@@ -9,13 +9,5 @@ import { Component, computed, input, output } from '@angular/core';
 })
 export class PokemonCard {
   pokemon = input.required<any>();
-  isFavorite = input(false);
-
-  favoriteToggled = output<string>();
-
   dexNumber = computed(() => '#' + String(this.pokemon().id).padStart(3, '0'));
-
-  toggleFavorite() {
-    this.favoriteToggled.emit(this.pokemon().name);
-  }
 }
