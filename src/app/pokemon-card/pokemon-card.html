@@ -1,0 +1,21 @@
+<div class="card" [class.favorite]="isFavorite()">
+  <p class="dex">{{ dexNumber() }}</p>
+  <h3>{{ pokemon().name }}</h3>
+
+  <p>
+    <strong>Type:</strong>
+    @for (type of pokemon().types; track type) {
+      <span class="type {{ 'type-' + type.toLowerCase() }}">{{ type }}</span>
+    }
+  </p>
+  <p><strong>Held Item:</strong> {{ pokemon().heldItem }}</p>
+  <p class="description">{{ pokemon().description }}</p>
+
+  <button (click)="toggleFavorite()">
+    @if (isFavorite()) {
+      Remove from Favorites
+    } @else {
+      Add to Favorites
+    }
+  </button>
+</div>
