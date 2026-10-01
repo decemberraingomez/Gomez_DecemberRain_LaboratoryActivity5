@@ -60,8 +60,8 @@ export class PokemonService {
     {
       id: 7,
       name: 'Squirtle',
-      types: ['Bitter Berry'],
-      heldItem: 'Magnet',
+      types: ['Water'],
+      heldItem: 'BitterBerry',
       description: 'The iconic Kanto starter. Its soft back swells and hardens after birth into a protective, hydrodynamic shell used to spray water.'
     },
     {
