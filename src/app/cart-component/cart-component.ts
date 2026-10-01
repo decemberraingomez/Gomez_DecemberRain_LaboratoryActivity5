@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { PokemartService } from '../services/pokemart-service';
 
 @Component({
-  imports: [],
+  imports: [RouterLink],
+  standalone: true,
   selector: 'app-cart-component',
   styleUrl: './cart-component.css',
   templateUrl: './cart-component.html',
 })
-export class CartComponent {}
+export class CartComponent {
+  martService = inject(PokemartService);
+}

@@ -1,1 +1,59 @@
-<p>cart-component works!</p>
+<div class="cart-container">
+  <h2>Shopping Cart</h2>
+
+  @if (martService.lastOrder() > 0) {
+    <p class="thanks">
+      Thank you for shopping! You paid ₽{{ martService.lastOrder() }}.
+      You have ₽{{ martService.wallet() }} left.
+    </p>
+  }
+
+  @if (martService.itemCount() > 0) {
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (row of martService.cartSummary(); track row.item.id) {
+          <tr>
+            <td>{{ row.item.name }}</td>
+            <td>₽{{ row.item.price }}</td>
+            <td class="qty">
+              <button (click)="martService.removeOne(row.item.id)">-</button>
+              {{ row.quantity }}
+              <button (click)="martService.addToCart(row.item)">+</button>
+            </td>
+            <td>₽{{ row.subtotal }}</td>
+            <td><button class="remove" (click)="martService.removeAll(row.item.id)">Remove</button></td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  } @else {
+    <p class="empty">
+      Your cart is empty. <a [routerLink]="['/pokemart']">Go to the PokeMart</a>
+    </p>
+  }
+
+  <div class="totals">
+    <p>Items: {{ martService.itemCount() }}</p>
+    <p>Trainer Money: ₽{{ martService.wallet() }}</p>
+    <p class="total">Total: ₽{{ martService.totalPrice() }}</p>
+    <p [class.negative]="martService.remainingMoney() < 0">
+      Money After Purchase: ₽{{ martService.remainingMoney() }}
+    </p>
+
+    @if (martService.remainingMoney() < 0) {
+      <p class="negative">Not enough money. Remove some items to check out.</p>
+    }
+
+    <button class="checkout" [disabled]="!martService.canCheckout()" (click)="martService.checkout()">Checkout</button>
+    <button class="clear" [disabled]="martService.itemCount() === 0" (click)="martService.clearCart()">Clear Cart</button>
+  </div>
+</div>

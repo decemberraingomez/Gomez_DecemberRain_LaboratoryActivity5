@@ -1,0 +1,24 @@
+<div class="mart-container">
+  <h2>PokeMart</h2>
+  <p>Buy items for your journey. Click "Add to Cart" to add an item to your cart.</p>
+
+  <div class="summary">
+    <span>Trainer Money: <strong>₽{{ martService.wallet() }}</strong></span>
+    <span>Items in Cart: <strong>{{ martService.itemCount() }}</strong></span>
+    <span>Total: <strong>₽{{ martService.totalPrice() }}</strong></span>
+    <a [routerLink]="['/cart']">View Cart</a>
+  </div>
+
+  @for (group of martService.itemsByCategory(); track group.category) {
+    <h3>{{ group.category }}</h3>
+    <div class="grid">
+      @for (item of group.items; track item.id) {
+        <app-item-card
+          [item]="item"
+          [quantityInCart]="martService.quantityOf(item.id)"
+          (addToCart)="onAddToCart($event)">
+        </app-item-card>
+      }
+    </div>
+  }
+</div>

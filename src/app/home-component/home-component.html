@@ -1,1 +1,35 @@
-<p>home-component works!</p>
+<div class="home-container">
+  <h2>Welcome</h2>
+  <p>
+    This application shows {{ pokemonService.totalPokemon() }} of my favorite Pokemon from the
+    Kanto, Johto and Hoenn regions. Each Pokemon has its type, held item and a short description.
+    You can also buy items from the PokeMart and see the total in your cart.
+  </p>
+
+  <h3>Regions</h3>
+  <div class="regions">
+    @for (region of pokemonService.regionSummary(); track region.name) {
+      <a class="region-box" [routerLink]="[region.route]">
+        <strong>{{ region.name }}</strong>
+        <span>{{ region.count }} Pokemon</span>
+      </a>
+    }
+  </div>
+
+  <h3>Summary</h3>
+  <ul class="summary">
+    <li>Favorite Pokemon: {{ pokemonService.favoriteCount() }}</li>
+    <li>Items in Cart: {{ martService.itemCount() }}</li>
+    <li>Cart Total: ₽{{ martService.totalPrice() }}</li>
+    <li>Trainer Money: ₽{{ martService.wallet() }}</li>
+  </ul>
+
+  @if (pokemonService.favoriteCount() > 0) {
+    <h3>My Favorites</h3>
+    <p>
+      @for (name of pokemonService.favorites(); track name) {
+        <span class="favorite">{{ name }}</span>
+      }
+    </p>
+  }
+</div>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { HomeComponent } from './home-component';
+import { PokemartComponent } from './pokemart-component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('PokemartComponent', () => {
+  let component: PokemartComponent;
+  let fixture: ComponentFixture<PokemartComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HomeComponent],
+      imports: [PokemartComponent],
       providers: [provideRouter([])],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(PokemartComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

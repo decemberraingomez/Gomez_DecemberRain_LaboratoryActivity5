@@ -1,0 +1,109 @@
+.cart-container {
+  background-color: #ffffff;
+  border: 2px solid #dfe4e8;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.cart-container h2 {
+  font-size: 28px;
+}
+
+.thanks {
+  background-color: #e6f6ed;
+  border: 1px solid #1e8449;
+  color: #145a32;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid #dfe4e8;
+}
+
+th {
+  background-color: #f4f6f8;
+}
+
+.qty button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #2c3e50;
+  border-radius: 4px;
+  background-color: #ffffff;
+  cursor: pointer;
+  margin: 0 4px;
+}
+
+.remove {
+  border: none;
+  background: none;
+  color: #c0392b;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.empty {
+  color: #7f8c8d;
+}
+
+.empty a {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.totals {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid #2c3e50;
+}
+
+.totals p {
+  margin: 6px 0;
+}
+
+.total {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.negative {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.checkout,
+.clear {
+  margin-top: 10px;
+  margin-right: 8px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.checkout {
+  border: none;
+  background-color: #2c3e50;
+  color: #ffffff;
+}
+
+.clear {
+  border: 1px solid #2c3e50;
+  background-color: #ffffff;
+  color: #2c3e50;
+}
+
+.checkout:disabled,
+.clear:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
