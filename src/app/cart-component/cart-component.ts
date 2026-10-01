@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { PokemartService } from '../services/pokemart-service';
+import { PokemartService } from '../pokemart-service';
 
 @Component({
   imports: [RouterLink],
