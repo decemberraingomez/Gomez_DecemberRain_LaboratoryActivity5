@@ -1,0 +1,15 @@
+<div class="region-container">
+  <h2>Kanto Region</h2>
+  <p>These are my six favorite Pokemon from the Kanto region.</p>
+  <p class="count">Favorites in this region: {{ favoritesHere() }} of {{ kantoPokemon().length }}</p>
+
+  <div class="grid">
+    @for (pokemon of kantoPokemon(); track pokemon.id) {
+      <app-pokemon-card
+        [pokemon]="pokemon"
+        [isFavorite]="pokemonService.isFavorite(pokemon.name)"
+        (favoriteToggled)="onFavoriteToggled($event)">
+      </app-pokemon-card>
+    }
+  </div>
+</div>
