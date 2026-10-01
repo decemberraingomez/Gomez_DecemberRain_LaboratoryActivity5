@@ -1,0 +1,11 @@
+<div class="item">
+  <h4>{{ item().name }}</h4>
+  <p class="description">{{ item().description }}</p>
+  <p class="price">₽{{ item().price }}</p>
+
+  @if (quantityInCart() > 0) {
+    <p class="in-cart">In cart: {{ quantityInCart() }}</p>
+  }
+
+  <button (click)="onAdd()">Add to Cart</button>
+</div>
