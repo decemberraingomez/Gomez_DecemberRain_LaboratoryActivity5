@@ -13,12 +13,4 @@ export class HoennComponent {
   pokemonService = inject(PokemonService);
 
   hoennPokemon = this.pokemonService.hoenn;
-
-  favoritesHere = computed(() =>
-    this.hoennPokemon().filter(pokemon => this.pokemonService.favorites().includes(pokemon.name)).length
-  );
-
-  onFavoriteToggled(name: string) {
-    this.pokemonService.toggleFavorite(name);
-  }
 }

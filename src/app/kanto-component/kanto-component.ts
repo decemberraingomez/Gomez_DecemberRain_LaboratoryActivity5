@@ -13,12 +13,4 @@ export class KantoComponent {
   pokemonService = inject(PokemonService);
 
   kantoPokemon = this.pokemonService.kanto;
-
-  favoritesHere = computed(() =>
-    this.kantoPokemon().filter(pokemon => this.pokemonService.favorites().includes(pokemon.name)).length
-  );
-
-  onFavoriteToggled(name: string) {
-    this.pokemonService.toggleFavorite(name);
-  }
 }

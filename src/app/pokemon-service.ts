@@ -6,25 +6,25 @@ import { Injectable, computed, signal } from '@angular/core';
 export class PokemonService {
   private kantoPokemon = signal([
     {
-      id: 25,
-      name: 'Pikachu',
-      types: ['Electric'],
+      id: 226,
+      name: 'Mantine',
+      types: ['Water', 'Flying'],
       heldItem: 'Light Ball',
-      description: 'A cheerful Mouse Pokemon that stores electricity in its red cheek pouches and lets it out in sparks when it feels threatened.'
+      description: 'A majestic, docile Water/Flying-type resembling a manta ray. It skims the open ocean waves and can glide over 300 feet into the air once it builds sufficient momentum.'
     },
     {
-      id: 6,
-      name: 'Charizard',
-      types: ['Fire', 'Flying'],
+      id: 194,
+      name: 'Wooper',
+      types: ['Water', 'Ground'],
       heldItem: 'Charcoal',
-      description: 'Flies through the sky looking for strong opponents. Its fiery breath can melt boulders, but it never turns it on weaker foes.'
+      description: 'A cheerful, amphibious axolotl-like Pokémon. When on land, it coats its skin in a slippery, poisonous film to stay hydrated'
     },
     {
-      id: 94,
-      name: 'Gengar',
-      types: ['Ghost', 'Poison'],
+      id: 183,
+      name: 'Marill',
+      types: ['Water', 'Fairy'],
       heldItem: 'Spell Tag',
-      description: 'Lurks in the shadows of rooms and streets. People say the air turns suddenly cold when a Gengar is hiding nearby.'
+      description: 'A round "Aqua Mouse" Pokémon. Its fur naturally repels water, and its oil-filled tail keeps it safely afloat even in intense river currents.'
     },
     {
       id: 143,
@@ -51,56 +51,56 @@ export class PokemonService {
 
   private johtoPokemon = signal([
     {
-      id: 157,
-      name: 'Typhlosion',
-      types: ['Fire'],
-      heldItem: 'Quick Claw',
-      description: 'Hides behind a shimmering wall of heat. When it gets angry, the flames around its neck flare up and scorch everything nearby.'
+      id: 143,
+      name: 'Snorlax',
+      types: ['Normal'],
+      heldItem: 'Leftovers',
+      description: 'Spends its whole day eating and sleeping. Its stomach is so tough it can digest almost anything without getting sick.'
     },
     {
-      id: 181,
-      name: 'Ampharos',
-      types: ['Electric'],
+      id: 7,
+      name: 'Squirtle',
+      types: ['Bitter Berry'],
       heldItem: 'Magnet',
-      description: 'The bright orb on its tail can be seen from far away. One famous Ampharos lights up the lighthouse in Olivine City.'
+      description: 'The iconic Kanto starter. Its soft back swells and hardens after birth into a protective, hydrodynamic shell used to spray water.'
     },
     {
-      id: 197,
-      name: 'Umbreon',
-      types: ['Dark'],
-      heldItem: 'Black Glasses',
-      description: 'An Eevee evolution touched by moonlight. The yellow rings on its body glow in the dark as it waits to ambush its prey.'
+      id: 54,
+      name: 'Psyduck',
+      types: ['Water'],
+      heldItem: 'Berry',
+      description: 'A yellow, dazed duck-like Pokémon. It suffers from constant headaches; when its stress peaks, it accidentally unleashes potent psychokinetic powers.'
     },
     {
-      id: 212,
-      name: 'Scizor',
-      types: ['Bug', 'Steel'],
-      heldItem: 'Metal Coat',
-      description: 'Its body is as hard as steel. The eye patterns on its pincers trick enemies into thinking it has three heads.'
+      id: 87,
+      name: 'Dewgong',
+      types: ['Water', 'Ice'],
+      heldItem: 'NeverMeltIce',
+      description: 'A sleek, white sea mammal. It thrives in freezing ocean waters, sleeping beneath shallow ice during the day and hunting gracefully at night.'
     },
     {
-      id: 214,
-      name: 'Heracross',
-      types: ['Bug', 'Fighting'],
-      heldItem: 'Black Belt',
-      description: 'Uses its mighty horn to throw opponents many times its own weight. It gathers in forests to sip sweet tree sap.'
+      id: 133,
+      name: 'Eevee',
+      types: ['Normal'],
+      heldItem: 'Eevium Z',
+      description: ' A small mammalian Pokémon beloved for its unstable genetic structure. This allows it to evolve into one of eight distinct "Eeveelutions" depending on its environment.'
     },
     {
-      id: 248,
-      name: 'Tyranitar',
-      types: ['Rock', 'Dark'],
-      heldItem: 'Hard Stone',
-      description: 'Strong enough to knock down a mountain and armored so heavily that most attacks bounce off. It is always looking for a worthy rival.'
+      id: 35,
+      name: 'Clefairy',
+      types: ['Fairy'],
+      heldItem: 'Moon Stone',
+      description: 'A rare, magical Pokémon rumored to have come from the moon. It uses its small wings to float and gathers in mountain ranges to dance during full moons.'
     }
   ]);
 
   private hoennPokemon = signal([
     {
-      id: 257,
-      name: 'Blaziken',
-      types: ['Fire', 'Fighting'],
-      heldItem: 'Charcoal',
-      description: 'Fights with blazing kicks and flaming wrists. Its legs are so strong it can leap over a 30-story building.'
+      id: 385,
+      name: 'Jirachi',
+      types: ['Steel', 'Psychic'],
+      heldItem: 'Star Piece',
+      description: 'A Mythical "Wish Pokémon." It hibernates for a thousand years, waking up for only seven days to grant any wishes written upon the tags on its head.'
     },
     {
       id: 260,

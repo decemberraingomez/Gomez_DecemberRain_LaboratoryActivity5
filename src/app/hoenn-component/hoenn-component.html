@@ -1,14 +1,11 @@
 <div class="region-container">
   <h2>Hoenn Region</h2>
   <p>These are my six favorite Pokemon from the Hoenn region.</p>
-  <p class="count">Favorites in this region: {{ favoritesHere() }} of {{ hoennPokemon().length }}</p>
 
   <div class="grid">
     @for (pokemon of hoennPokemon(); track pokemon.id) {
       <app-pokemon-card
-        [pokemon]="pokemon"
-        [isFavorite]="pokemonService.isFavorite(pokemon.name)"
-        (favoriteToggled)="onFavoriteToggled($event)">
+        [pokemon]="pokemon">
       </app-pokemon-card>
     }
   </div>

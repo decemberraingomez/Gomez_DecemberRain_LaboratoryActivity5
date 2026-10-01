@@ -13,12 +13,4 @@ export class JohtoComponent {
   pokemonService = inject(PokemonService);
 
   johtoPokemon = this.pokemonService.johto;
-
-  favoritesHere = computed(() =>
-    this.johtoPokemon().filter(pokemon => this.pokemonService.favorites().includes(pokemon.name)).length
-  );
-
-  onFavoriteToggled(name: string) {
-    this.pokemonService.toggleFavorite(name);
-  }
 }
